@@ -8,7 +8,7 @@ class FootballMatchDataset(Dataset):
 
     def __getitem__(self, index):
         record = self.data.iloc[index]
-        features = record[:4]
+        features = record[:6]
         label = record[-1]
         return (torch.tensor(features.values), label)
     
